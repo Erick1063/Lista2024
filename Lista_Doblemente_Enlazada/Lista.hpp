@@ -1,5 +1,6 @@
 #ifndef Lista_H
 #define Lista_H
+#include "Nodo.hpp"
 
 class  Lista{
 
@@ -10,7 +11,7 @@ class  Lista{
 		void popFront();
 		void popBack();
 		bool empty();
-		void mostraLista();
+		void mostrarLista();
 
 	private:
 		Nodo *head=nullptr;

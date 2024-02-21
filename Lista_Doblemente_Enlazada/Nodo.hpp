@@ -7,9 +7,8 @@ class  Nodo{
 		Nodo(int);
 		void setNext(Nodo *);
 		Nodo *getNext();
-		void setPre();
-		Nodo *getPrev(Nodo *);
-		void setData(int );l
+		void setPrev(Nodo *);
+		Nodo *getPrev();
 		int getData();
 	private:
 		Nodo *next=nullptr;
