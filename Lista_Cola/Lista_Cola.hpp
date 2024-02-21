@@ -5,6 +5,12 @@ class  ListaCola{
 	
 	public:
 		ListaCola(int);
+		void pushFront(int);
+		void pushBack(int);
+		void popFront();
+		void popBack();
+		void mostrarLista();
+		bool empty();
 		
 	private:
 		NodoCola *head = nullptr;
