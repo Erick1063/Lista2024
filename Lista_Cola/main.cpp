@@ -18,6 +18,12 @@ int main(){
 	cout<<"Prueba del pushBack"<<endl;
 	L.pushBack(2);
 	L.mostrarLista();
+	cout<<"Prueba del popFront"<<endl;
+	L.popFront();
+	L.mostrarLista();
+	cout<<"Prueba del popBack"<<endl;
+	L.popBack();
+	L.mostrarLista();
 	
 	
 	

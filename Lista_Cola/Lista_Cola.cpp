@@ -25,17 +25,44 @@ void ListaCola::pushBack(int data){
 	else
 	{
 		NodoCola *Nnodo=new NodoCola(data);
-	    NodoCola *Naux=head;
-	    while(Naux->getNext()!=nullptr)
+	    tail->setNext(Nnodo);
+	    tail=Nnodo;
+	}
+}
+//popFront
+void ListaCola::popFront(){
+	if(empty()==true)
+	{
+		cout<<"La lista esta vacia"<<endl;
+	}
+	else
+	{
+		NodoCola *Naux=head;
+		head=head->getNext();
+		delete Naux;
+	}
+}
+//popBack
+void ListaCola::popBack(){
+	if(empty()==true)
+	{
+		cout<<"La lista esta vacia"<<endl;
+	}
+	else
+	{
+		NodoCola *Naux=head;
+	    while(Naux->getNext()->getNext()!=nullptr)
 	    {
 	    	Naux=Naux->getNext();
 		}
-		Naux->setNext(Nnodo);
-		tail=Nnodo;
+		NodoCola *Naux2=Naux->getNext();
+		Naux->setNext(nullptr);
+		tail=Naux;
+		delete Naux2;
+		
 	}
+	
 }
-
-
 
 //Mostrar datos de la lista
 void ListaCola::mostrarLista(){
