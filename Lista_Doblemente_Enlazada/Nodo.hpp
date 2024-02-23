@@ -4,12 +4,12 @@
 class  Nodo{
 
 	public:
-		Nodo(int);
+		Nodo(const int);
 		void setNext(Nodo *);
 		Nodo *getNext();
-		void setPrev(Nodo *);
+		void setPrev( Nodo *);
 		Nodo *getPrev();
-		int getData();
+		int getData()const;
 	private:
 		Nodo *next=nullptr;
 		Nodo *prev=nullptr;

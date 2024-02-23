@@ -6,6 +6,8 @@ using namespace std;
 
 int main(){
 	cout<<"----------------------------------"<<endl;
+	cout<<"---------LISTAS SIMPLES-----------"<<endl;
+	cout<<"----------------------------------"<<endl;
 	cout<<"Creando Lista"<<endl;
 	Lista_simple L(1);
 	L.MostrarLista();

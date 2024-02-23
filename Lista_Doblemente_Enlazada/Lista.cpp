@@ -3,21 +3,21 @@
 using std::cout;
 using std::endl;
 //constructor
-Lista::Lista(int data){
+Lista::Lista(const int data){
 	Nodo *Nnodo = new Nodo(data);
 	this->head=Nnodo;
 	this->tail=Nnodo;
 }
 
 //PushFront
-void Lista::pushFront(int data){
+void Lista::pushFront(const int data){
 	Nodo *Nnodo=new Nodo(data);
 	Nnodo->setNext(head);
 	head=Nnodo;
 }
 
 //pushBack
-void Lista::pushBack(int data){
+void Lista::pushBack(const int data){
 	if(empty()==true){
 		pushFront(data);
 	}
@@ -78,7 +78,7 @@ void Lista::mostrarLista(){
 }
 
 //empty Lista vacia?  false=llena true =vacia
-bool Lista::empty(){
+bool Lista::empty()const{
 	if(head !=nullptr && tail !=nullptr)
 	{
 		return false;

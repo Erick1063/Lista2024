@@ -1,12 +1,12 @@
 #include "Nodo_cola.hpp"
 
 //Constructor
-NodoCola::NodoCola(int data){
+NodoCola::NodoCola(const int data){
 	this->data=data;
 }
 
 //getData (Obtener la data)
-int NodoCola::getData(){
+int NodoCola::getData()const {
 	return this->data;
 }
 

@@ -3,10 +3,11 @@
 using std::cout;
 using std::endl;
 
-
 int main(){
-	cout<<"--------------------------------------"<<endl;
-	cout<<"-----ESTRUCTURA DE DATO VECTOR--------"<<endl;	
+	vector V(4);
+	V.pushFront(1);
+	V.mostrarVector();
+	
 	
 	return 0;
 }

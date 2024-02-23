@@ -4,13 +4,13 @@
 class  ListaCola{
 	
 	public:
-		ListaCola(int);
-		void pushFront(int);
-		void pushBack(int);
+		ListaCola(const int);
+		void pushFront(const int);
+		void pushBack(const int);
 		void popFront();
 		void popBack();
 		void mostrarLista();
-		bool empty();
+		bool empty()const;
 		
 	private:
 		NodoCola *head = nullptr;

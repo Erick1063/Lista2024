@@ -4,21 +4,21 @@ using std::cout;
 using std::endl;
 
 //constructor
-ListaCola::ListaCola(int data){
+ListaCola::ListaCola(const int data){
 	NodoCola *Nnodo=new NodoCola(data);
 	this->head=Nnodo;
 	this->tail=Nnodo;
 }
 
 //PushFront
-void ListaCola::pushFront(int data){
+void ListaCola::pushFront(const int data){
 	NodoCola *Nnodo=new NodoCola(data);
 	Nnodo->setNext(head);
 	head=Nnodo;	
 }
 
 //pushBack
-void ListaCola::pushBack(int data){
+void ListaCola::pushBack(const int data){
 	if(empty()==true){
 		pushFront(data);
 	}
@@ -77,7 +77,7 @@ void ListaCola::mostrarLista(){
 }
 
 //empty Lista vacia?  false=llena true =vacia
-bool ListaCola::empty(){
+bool ListaCola::empty()const{
 	if(head !=nullptr && tail !=nullptr)
 	{
 		return false;

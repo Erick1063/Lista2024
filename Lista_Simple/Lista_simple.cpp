@@ -6,14 +6,14 @@ Lista_simple::Lista_simple(int data){
 }
 
 //pushFront
-void Lista_simple::PushFront(int data){
+void Lista_simple::PushFront(const int data){
 	Nodo_simple *Nnodo= new Nodo_simple(data);
 	Nnodo->setNext(head);
 	head=Nnodo;
 }
 
 //pushBack
-void Lista_simple::PushBack(int data){
+void Lista_simple::PushBack(const int data){
 	Nodo_simple *Nnodo = new Nodo_simple(data);
 	Nodo_simple *Naux  = head;
 	while(Naux->getNext() != nullptr)

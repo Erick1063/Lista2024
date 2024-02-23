@@ -6,7 +6,8 @@ using std::endl;
 
 int main(){
 	cout<<"----------------------------------"<<endl;
-	cout<<"Prueba de lista doblemente enlazadas"<<endl;
+	cout<<"PRUEBA DE LISTA DOBLEMENTE ENLAZADAS CON COLA"<<endl;
+	cout<<"----------------------------------"<<endl;
 	cout<<"Creacion de la lista"<<endl;
 	cout<<"----------------------------"<<endl;
 	Lista L(1);
@@ -27,9 +28,6 @@ int main(){
 	cout<<"Vaciando la lista"<<endl;
 	L.popBack();
 	L.mostrarLista();
-	
-	
-	
 	
 	
 	return 0;

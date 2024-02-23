@@ -4,9 +4,9 @@
 class  Lista_simple{
 	
 	public:
-		Lista_simple(int);   //constructor de Lista
-		void PushFront(int); //Agregar dato por el frente
-		void PushBack(int);	 //Agregar dato por detras	
+		Lista_simple(const int);   //constructor de Lista
+		void PushFront(const int); //Agregar dato por el frente
+		void PushBack(const int);	 //Agregar dato por detras	
 		void PopFront();     //Elimina el dato por el frente
 	    void PopBack();      //Elimina el dato por detras
 	    void MostrarLista();

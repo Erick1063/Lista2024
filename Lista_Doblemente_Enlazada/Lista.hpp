@@ -5,12 +5,12 @@
 class  Lista{
 
 	public:
-		Lista(int);
-		void pushFront(int);
-		void pushBack(int);
+		Lista(const int);
+		void pushFront(const int);
+		void pushBack(const int);
 		void popFront();
 		void popBack();
-		bool empty();
+		bool empty()const;
 		void mostrarLista();
 
 	private:

@@ -4,19 +4,19 @@ using std::cout;
 using std::endl;
 
 //constructor
-Nodo::Nodo(int data){
+Nodo::Nodo(const int data){
 	this->data=data;
 	this->prev=nullptr;
 	this->next=nullptr;
 }
 
 //retorna la data del nodo
-int Nodo::getData(){
+int Nodo::getData()const{
 	return this->data;
 }
 
 //setNext: cambia a lo que apunta next
-void Nodo::setNext(Nodo *Nnodo){
+void Nodo::setNext( Nodo *Nnodo){
 	this->next=Nnodo;
 }
 //setPrev: Cambia a lo que apunta el prev
