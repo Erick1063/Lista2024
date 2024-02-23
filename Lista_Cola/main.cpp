@@ -24,13 +24,5 @@ int main(){
 	cout<<"Prueba del popBack"<<endl;
 	L.popBack();
 	L.mostrarLista();
-	
-	
-	
-	
-	
-	
-	
-	
 	return 0;
 }
