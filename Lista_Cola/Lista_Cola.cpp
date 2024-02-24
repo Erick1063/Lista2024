@@ -1,84 +1,91 @@
 #include "Lista_Cola.hpp"
-#include<iostream>
+#include <iostream>
 using std::cout;
 using std::endl;
 
-//constructor
-ListaCola::ListaCola(const int data){
-	NodoCola *Nnodo=new NodoCola(data);
-	this->head=Nnodo;
-	this->tail=Nnodo;
+// constructor
+ListaCola::ListaCola(const int data)
+{
+	NodoCola *Nnodo = new NodoCola(data);
+	this->head = Nnodo;
+	this->tail = Nnodo;
 }
 
-//PushFront
-void ListaCola::pushFront(const int data){
-	NodoCola *Nnodo=new NodoCola(data);
+// PushFront
+void ListaCola::pushFront(const int data)
+{
+	NodoCola *Nnodo = new NodoCola(data);
 	Nnodo->setNext(head);
-	head=Nnodo;	
+	head = Nnodo;
 }
 
-//pushBack
-void ListaCola::pushBack(const int data){
-	if(empty()==true){
+// pushBack
+void ListaCola::pushBack(const int data)
+{
+	if (empty() == true)
+	{
 		pushFront(data);
 	}
 	else
 	{
-		NodoCola *Nnodo=new NodoCola(data);
-	    tail->setNext(Nnodo);
-	    tail=Nnodo;
+		NodoCola *Nnodo = new NodoCola(data);
+		tail->setNext(Nnodo);
+		tail = Nnodo;
 	}
 }
-//popFront
-void ListaCola::popFront(){
-	if(empty()==true)
+// popFront
+void ListaCola::popFront()
+{
+	if (empty() == true)
 	{
-		cout<<"La lista esta vacia"<<endl;
+		cout << "La lista esta vacia" << endl;
 	}
 	else
 	{
-		NodoCola *Naux=head;
-		head=head->getNext();
+		NodoCola *Naux = head;
+		head = head->getNext();
 		delete Naux;
 	}
 }
-//popBack
-void ListaCola::popBack(){
-	if(empty()==true)
+// popBack
+void ListaCola::popBack()
+{
+	if (empty() == true)
 	{
-		cout<<"La lista esta vacia"<<endl;
+		cout << "La lista esta vacia" << endl;
 	}
 	else
 	{
-		NodoCola *Naux=head;
-	    while(Naux->getNext()->getNext()!=nullptr)
-	    {
-	    	Naux=Naux->getNext();
+		NodoCola *Naux = head;
+		while (Naux->getNext()->getNext() != nullptr)
+		{
+			Naux = Naux->getNext();
 		}
-		NodoCola *Naux2=Naux->getNext();
+		NodoCola *Naux2 = Naux->getNext();
 		Naux->setNext(nullptr);
-		tail=Naux;
+		tail = Naux;
 		delete Naux2;
-		
 	}
-	
 }
 
-//Mostrar datos de la lista
-void ListaCola::mostrarLista(){
+// Mostrar datos de la lista
+void ListaCola::mostrarLista()
+{
 	NodoCola *Naux = head;
-	cout<<endl;
-	while(Naux != nullptr){
-		cout<<Naux->getData();
-		Naux=Naux->getNext();
+	cout << endl;
+	while (Naux != nullptr)
+	{
+		cout << Naux->getData();
+		Naux = Naux->getNext();
 	}
-	cout<<endl;
-	cout<<"----------------------------"<<endl;
+	cout << endl;
+	cout << "----------------------------" << endl;
 }
 
-//empty Lista vacia?  false=llena true =vacia
-bool ListaCola::empty()const{
-	if(head !=nullptr && tail !=nullptr)
+// empty Lista vacia?  false=llena true =vacia
+bool ListaCola::empty() const
+{
+	if (head != nullptr && tail != nullptr)
 	{
 		return false;
 	}
