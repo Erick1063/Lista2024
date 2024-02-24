@@ -5,17 +5,17 @@ class vector
 {
 
 public:
-	vector(const int);  //constructor
-	void pushFront(const int);  //meter dato por el frente
-	void pushBack(const int);//meter dato por detras
-	void mostrarVector(); //imprime los datos del vector
-	void popFront();   //elimina dato por el frente
-	void popBack();  //elimina dato por detras
+	vector(const int);		   // constructor
+	void pushFront(const int); // meter dato por el frente  O(n)
+	void pushBack(const int);  // meter dato por detras     O(1)
+	void mostrarVector();	   // imprime los datos del vector
+	void popFront();		   // elimina dato por el frente  O(n)
+	void popBack();			   // elimina dato por detras  O(1)
 
 private:
-	int *Array;  //Apuntador de tipo entero
-	int Dim;    //tamano del vector
-	int C;      //cantidad disponible del vector
+	int *Array; // Apuntador de tipo entero
+	int Dim;	// tamano del vector
+	int C;		// cantidad disponible del vector
 };
 
 #endif

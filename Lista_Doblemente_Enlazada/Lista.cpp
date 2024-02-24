@@ -2,7 +2,7 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-// constructor
+// Constructor
 Lista::Lista(const int data)
 {
 	Nodo *Nnodo = new Nodo(data);
@@ -10,7 +10,7 @@ Lista::Lista(const int data)
 	this->tail = Nnodo;
 }
 
-// PushFront
+// PushFront : ingresa dato por el frente
 void Lista::pushFront(const int data)
 {
 	Nodo *Nnodo = new Nodo(data);
@@ -18,7 +18,7 @@ void Lista::pushFront(const int data)
 	head = Nnodo;
 }
 
-// pushBack
+// pushBack : ingresa dato por detras
 void Lista::pushBack(const int data)
 {
 	if (empty() == true)
@@ -33,7 +33,7 @@ void Lista::pushBack(const int data)
 		tail = Nnodo;
 	}
 }
-// popFront
+// popFront : Elimina dato por el frente
 void Lista::popFront()
 {
 	if (empty() == true)
@@ -48,7 +48,7 @@ void Lista::popFront()
 		delete Naux;
 	}
 }
-// popBack
+// popBack : Elimina dato por detras
 void Lista::popBack()
 {
 	if (empty() == true)

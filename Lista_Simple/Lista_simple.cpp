@@ -6,7 +6,7 @@ Lista_simple::Lista_simple(int data)
 	head = Nnodo;
 }
 
-// pushFront
+// pushFront : mete el dato por el frente
 void Lista_simple::PushFront(const int data)
 {
 	Nodo_simple *Nnodo = new Nodo_simple(data);
@@ -14,7 +14,7 @@ void Lista_simple::PushFront(const int data)
 	head = Nnodo;
 }
 
-// pushBack
+// pushBack : mete el dato por detras
 void Lista_simple::PushBack(const int data)
 {
 	Nodo_simple *Nnodo = new Nodo_simple(data);
@@ -26,7 +26,7 @@ void Lista_simple::PushBack(const int data)
 	Naux->setNext(Nnodo);
 }
 
-// PopFront
+// PopFront : Elimina dato por el frente
 void Lista_simple::PopFront()
 {
 	Nodo_simple *Naux = head;
@@ -34,7 +34,7 @@ void Lista_simple::PopFront()
 	delete Naux;
 }
 
-// Popback
+// Popback : Elimina dato por detras
 void Lista_simple::PopBack()
 {
 	Nodo_simple *Naux = head;

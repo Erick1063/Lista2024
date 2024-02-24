@@ -3,7 +3,7 @@
 using std::cout;
 using std::endl;
 
-// constructor
+// Constructor
 ListaCola::ListaCola(const int data)
 {
 	NodoCola *Nnodo = new NodoCola(data);
@@ -11,7 +11,7 @@ ListaCola::ListaCola(const int data)
 	this->tail = Nnodo;
 }
 
-// PushFront
+// PushFront :Ingresamos dato por el frente
 void ListaCola::pushFront(const int data)
 {
 	NodoCola *Nnodo = new NodoCola(data);
@@ -19,10 +19,10 @@ void ListaCola::pushFront(const int data)
 	head = Nnodo;
 }
 
-// pushBack
+// pushBack : Ingresamos dato por detras
 void ListaCola::pushBack(const int data)
 {
-	if (empty() == true)
+	if (empty() == true) // Preguntamos si la lista esta vacia
 	{
 		pushFront(data);
 	}
@@ -33,10 +33,10 @@ void ListaCola::pushBack(const int data)
 		tail = Nnodo;
 	}
 }
-// popFront
+// popFront :  Eliminamos dato por el frente
 void ListaCola::popFront()
 {
-	if (empty() == true)
+	if (empty() == true) // Preguntamos si la lista se encuentra vacia
 	{
 		cout << "La lista esta vacia" << endl;
 	}
@@ -47,10 +47,10 @@ void ListaCola::popFront()
 		delete Naux;
 	}
 }
-// popBack
+// popBack : Eliminamos dato por detras
 void ListaCola::popBack()
 {
-	if (empty() == true)
+	if (empty() == true) // Preguntamos si la lista esta vacia
 	{
 		cout << "La lista esta vacia" << endl;
 	}

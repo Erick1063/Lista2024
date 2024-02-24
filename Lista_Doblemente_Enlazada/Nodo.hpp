@@ -5,12 +5,12 @@ class Nodo
 {
 
 public:
-	Nodo(const int);
-	void setNext(Nodo *);
-	Nodo *getNext();
-	void setPrev(Nodo *);
-	Nodo *getPrev();
-	int getData() const;
+	Nodo(const int);	  // Constructor
+	void setNext(Nodo *); // Modifica el nodo siguiente
+	Nodo *getNext();	  // Obtenemos el nodo siguiente
+	void setPrev(Nodo *); // Modificamos el nodo anterior
+	Nodo *getPrev();	  // Obtenemos el nodo anterior
+	int getData() const;  // Obtenemos la data
 
 private:
 	Nodo *next = nullptr;

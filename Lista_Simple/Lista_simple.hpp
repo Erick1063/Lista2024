@@ -5,12 +5,12 @@ class Lista_simple
 {
 
 public:
-	Lista_simple(const int);   // constructor de Lista
-	void PushFront(const int); // Agregar dato por el frente
-	void PushBack(const int);  // Agregar dato por detras
-	void PopFront();		   // Elimina el dato por el frente
-	void PopBack();			   // Elimina el dato por detras
-	void MostrarLista();
+	Lista_simple(const int);   // Constructor de Lista
+	void PushFront(const int); // Agregar dato por el frente  O(1)
+	void PushBack(const int);  // Agregar dato por detras     O(n)
+	void PopFront();		   // Elimina el dato por el frente O(1)
+	void PopBack();			   // Elimina el dato por detras   O(n)
+	void MostrarLista();	   // Imprime los datos de la lista
 
 private:
 	Nodo_simple *head = nullptr;

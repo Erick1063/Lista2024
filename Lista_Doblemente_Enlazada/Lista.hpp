@@ -6,13 +6,13 @@ class Lista
 {
 
 public:
-	Lista(const int);
-	void pushFront(const int);
-	void pushBack(const int);
-	void popFront();
-	void popBack();
-	bool empty() const;
-	void mostrarLista();
+	Lista(const int);		   // Constructor
+	void pushFront(const int); // Ingresamos dato por el frente O(1)
+	void pushBack(const int);  // Ingresamos dato por detras    O(1)
+	void popFront();		   // Eliminamos elemento por el frente O(1)
+	void popBack();			   // Eliminamos dato por detras       O(1)
+	bool empty() const;		   // Nos preguntamos si la lista esta vacia
+	void mostrarLista();	   // Imprimimos los datos que tenga la Lista
 
 private:
 	Nodo *head = nullptr;
