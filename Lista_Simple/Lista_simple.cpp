@@ -24,6 +24,7 @@ void Lista_simple::PushBack(const int data)
 		Naux = Naux->getNext();
 	}
 	Naux->setNext(Nnodo);
+	delete Naux; //Lo agregue cuando estaba haciendo el informe
 }
 
 // PopFront : Elimina dato por el frente

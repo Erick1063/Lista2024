@@ -10,18 +10,25 @@ Lista::Lista(const int data)
 	this->tail = Nnodo;
 }
 
-// PushFront : ingresa dato por el frente
 void Lista::pushFront(const int data)
 {
 	Nodo *Nnodo = new Nodo(data);
 	Nnodo->setNext(head);
+	if (head != nullptr)
+	{
+		head->setPrev(Nnodo);
+	}
 	head = Nnodo;
+	if (tail == nullptr)
+	{
+		tail = Nnodo;
+	}
 }
 
 // pushBack : ingresa dato por detras
 void Lista::pushBack(const int data)
 {
-	if (empty() == true)
+	if (empty()==true)
 	{
 		pushFront(data);
 	}
@@ -51,16 +58,24 @@ void Lista::popFront()
 // popBack : Elimina dato por detras
 void Lista::popBack()
 {
-	if (empty() == true)
+	if (empty())
 	{
-		cout << "La lista esta vacia" << endl;
+		cout << "La lista está vacía" << endl;
 	}
 	else
 	{
-		Nodo *Naux = tail;
-		Naux->getPrev()->setNext(nullptr);
-		tail = Naux->getPrev();
-		delete Naux;
+		if (head == tail)
+		{
+			delete head;
+			head = tail = nullptr;
+		}
+		else
+		{
+			Nodo *Naux = tail;
+			tail = tail->getPrev();
+			tail->setNext(nullptr);
+			delete Naux;
+		}
 	}
 }
 

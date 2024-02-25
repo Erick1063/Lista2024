@@ -22,7 +22,7 @@ int main()
 	cout << "Prueba del popFront" << endl;
 	L.popFront();
 	L.mostrarLista();
-	cout << "Prueba del popBack" << endl;
+	cout << "Prueba del popBack sin vacia lista" << endl;
 	L.popBack();
 	L.mostrarLista();
 	cout << "Vaciando la lista" << endl;
