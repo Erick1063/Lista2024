@@ -11,8 +11,8 @@ public:
 	void setNext(NodoCola *); // Cambia a lo que apunta el nodo
 
 private:
-	NodoCola *next = nullptr;
-	int data;
+	NodoCola *next = nullptr; // Por defecto los nodos apuntan a nullptr
+	int data;				  // El dato del nodo
 };
 
 #endif

@@ -15,7 +15,7 @@ public:
 private:
 	int *Array; // Apuntador de tipo entero
 	int Dim;	// tamano del vector
-	int C;		// cantidad disponible del vector
+	int C;		// Cantidad de elementos del vector
 };
 
 #endif

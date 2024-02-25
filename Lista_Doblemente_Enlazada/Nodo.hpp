@@ -13,9 +13,9 @@ public:
 	int getData() const;  // Obtenemos la data
 
 private:
-	Nodo *next = nullptr;
-	Nodo *prev = nullptr;
-	int data;
+	Nodo *next = nullptr; // Por predeterminado un nodo no apunta a nada por la derecha
+	Nodo *prev = nullptr; // Por predeterminado un nodo no apunta a nada por la izquierda
+	int data;			  // El dato del nodo
 };
 
 #endif

@@ -15,8 +15,8 @@ public:
 	void mostrarLista();	   // Imprimimos los datos que tenga la Lista
 
 private:
-	Nodo *head = nullptr;
-	Nodo *tail = nullptr;
+	Nodo *head = nullptr; // Head apunta al primer elemento de la lista
+	Nodo *tail = nullptr; // Tail apunta al ultimo elemento de la lista
 };
 
 #endif

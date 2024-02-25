@@ -6,17 +6,17 @@ using std::endl;
 // Constructor
 ListaCola::ListaCola(const int data)
 {
-	NodoCola *Nnodo = new NodoCola(data);
-	this->head = Nnodo;
-	this->tail = Nnodo;
+	NodoCola *Nnodo = new NodoCola(data); // Creamos un nuevo nodo
+	this->head = Nnodo;					  // Que head apunte a ese nuevo nodo
+	this->tail = Nnodo;					  // Que tail apunte a ese nuevo nodo
 }
 
 // PushFront :Ingresamos dato por el frente
 void ListaCola::pushFront(const int data)
 {
-	NodoCola *Nnodo = new NodoCola(data);
-	Nnodo->setNext(head);
-	head = Nnodo;
+	NodoCola *Nnodo = new NodoCola(data); // Creamos un nuevo nodo
+	Nnodo->setNext(head);				  // Que el nuevo nodo apunte a lo que apunta head
+	head = Nnodo;						  // Que head apunte ahora al nuevo nodo
 }
 
 // pushBack : Ingresamos dato por detras
@@ -28,9 +28,9 @@ void ListaCola::pushBack(const int data)
 	}
 	else
 	{
-		NodoCola *Nnodo = new NodoCola(data);
-		tail->setNext(Nnodo);
-		tail = Nnodo;
+		NodoCola *Nnodo = new NodoCola(data); // Creamos el nuevo nodo
+		tail->setNext(Nnodo);				  // Que el ultimo nodo apunte al nuevo nodo
+		tail = Nnodo;						  // Que tail apunte al nuevo nodo
 	}
 }
 // popFront :  Eliminamos dato por el frente
@@ -42,9 +42,9 @@ void ListaCola::popFront()
 	}
 	else
 	{
-		NodoCola *Naux = head;
-		head = head->getNext();
-		delete Naux;
+		NodoCola *Naux = head;	// Creamos un nodo auxiliar que almacene el primer nodo
+		head = head->getNext(); // Que head apunte al segundo nodo por medio de head->next
+		delete Naux;			// Eliminamos el nodo auxiliar el cual contiene al primer nodo
 	}
 }
 // popBack : Eliminamos dato por detras
@@ -56,30 +56,37 @@ void ListaCola::popBack()
 	}
 	else
 	{
-		NodoCola *Naux = head;
-		while (Naux->getNext()->getNext() != nullptr)
+		NodoCola *Naux = head;						  // Creamos un nodo auxiliar
+		while (Naux->getNext()->getNext() != nullptr) // Buscamos el ultimo nodo pero con 2 pasos de anticipacion
 		{
-			Naux = Naux->getNext();
+			Naux = Naux->getNext(); // Actualizamos el nodo auxiliar para recorrer
 		}
-		NodoCola *Naux2 = Naux->getNext();
-		Naux->setNext(nullptr);
-		tail = Naux;
-		delete Naux2;
+		NodoCola *Naux2 = Naux->getNext(); // Creamos un segundo nodo auxiliar para almacenar el penultimo nodo
+		Naux->setNext(nullptr);			   // Que el penultimo nodo apunte a nullptr
+		tail = Naux;					   // Que tail apunte al penultimo nodo quiero ahora sera el ultimo
+		delete Naux2;					   // Eliminamos el nodo auxiliar
 	}
 }
 
 // Mostrar datos de la lista
 void ListaCola::mostrarLista()
 {
-	NodoCola *Naux = head;
-	cout << endl;
-	while (Naux != nullptr)
+	if (empty() == true)
 	{
-		cout << Naux->getData();
-		Naux = Naux->getNext();
+		cout << "Lista vacia" << endl;
 	}
-	cout << endl;
-	cout << "----------------------------" << endl;
+	else
+	{
+		NodoCola *Naux = head;
+		cout << endl;
+		while (Naux != nullptr)
+		{
+			cout << Naux->getData();
+			Naux = Naux->getNext();
+		}
+		cout << endl;
+		cout << "----------------------------" << endl;
+	}
 }
 
 // empty Lista vacia?  false=llena true =vacia

@@ -10,9 +10,11 @@ int main()
 	cout << "Creando Lista" << endl;
 	Lista_simple L(1);
 	L.MostrarLista();
+
 	cout << "Pruba del pushFront" << endl;
 	L.PushFront(0);
 	L.MostrarLista();
+
 	cout << "Prueba del pushBack" << endl;
 	L.PushBack(2);
 	L.MostrarLista();
@@ -22,6 +24,8 @@ int main()
 	cout << "Prueba del popBack" << endl;
 	L.PopBack();
 	L.MostrarLista();
-
+	cout << "Prueba de vaciar e imprimir lista" << endl;
+	L.PopFront();
+	L.MostrarLista();
 	return 0;
 }

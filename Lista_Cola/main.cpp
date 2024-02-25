@@ -25,5 +25,8 @@ int main()
 	cout << "Prueba del popBack" << endl;
 	L.popBack();
 	L.mostrarLista();
+	cout << "Vaciando lista" << endl;
+	L.popFront();
+	L.mostrarLista();
 	return 0;
 }

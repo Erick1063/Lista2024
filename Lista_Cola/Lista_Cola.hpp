@@ -14,7 +14,7 @@ public:
 	bool empty() const;		   // Preguntamos si la lista se encuentra o no vacia
 
 private:
-	NodoCola *head = nullptr;
-	NodoCola *tail = nullptr;
+	NodoCola *head = nullptr; // Apunta al primer elemento de una lista
+	NodoCola *tail = nullptr; // Apunta al ultimo elemento de una lista
 };
 #endif
